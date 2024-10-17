@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS Reset and Box Model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif; /* Default font family */
+ font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html {
+  font-size: 16px; /* Base font size for easy scaling */
+}
+
+/* Root Variables */
+:root {
+  /* Primary Colors */
+  --primary: #6200ee; /* Purple */
+  --primaryLight: #bbaef1; /* Light Purple */
+  --primaryDark: #0a00b6; /* Dark Purple */
+
+  /* Secondary Colors */
+  --secondary: #03dac6; /* Teal */
+  --secondaryLight: #66fff9; /* Light Teal */
+  --secondaryDark: #00a896; /* Dark Teal */
+
+  /* Neutral Colors */
+  --neutralDarker: #121212; /* Darker Gray */
+  --neutralDark: #1e1e1e; /* Dark Gray */
+  --neutral: #b0bec5; /* Medium Gray */
+  --neutralLight: #e0e0e0; /* Light Gray */
+  --neutralLighter: #f5f5f5; /* Very Light Gray */
+  --neutralLightest: #ffffff; /* White */
+
+  /* Typography */
+  --fontBody:"Montserrat", sans-serif; /* Body font */
+  --fontHeading: "Montserrat", sans-serif; /* Heading font */
+  --fontSizeBase: 1rem; /* Base font size */
+  --fontSizeSmall: 0.875rem; /* Small font size */
+  --fontSizeLarge: 1.25rem; /* Large font size */
+  --fontWeightNormal: 500; /* Normal weight */
+  --fontWeightBold: 800; /* Bold weight */
+
+  /* Line Heights */
+  --lineHeightBase: 1.5; /* Base line height */
+  --lineHeightHeading: 1.2; /* Heading line height */
+}
+
+/* Global Styles */
+body {
+  background-color: var(--neutralLightest);
+  color: var(--neutralDarker);
+  font-family: var(--fontBody);
+  font-size: var(--fontSizeBase);
+  line-height: var(--lineHeightBase);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fontHeading);
+  color: var(--primary);
+  line-height: var(--lineHeightHeading);
+}
+
+h1 {
+  font-size: 2.5rem; /* Size for h1 */
+}
+
+h2 {
+  font-size: 2rem; /* Size for h2 */
+}
+
+h3 {
+  font-size: 1.5rem; /* Size for h3 */
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--neutralLightest);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: var(--fontSizeBase);
+  font-weight: var(--fontWeightBold);
+}
+
+button:hover {
+  background-color: var(--primaryLight);
+}
+
+button:active {
+  background-color: var(--primaryDark);
+}
+
+.cardBorder {
+    padding: 50px 0;
+    border: 3px solid #03dac6;
+}
+
+.card-hire-me {
+     width: 100vw;
+     background-color: var(--neutralLighter);
+    font-weight: var(--fontWeightBold);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.card-hire-me a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5em;
+    color: var(--secondary);
+}
+
+.card-hire-me a:hover {
+  transition: 1.8s;
+}
+
+.card-hire-me p {
+  margin: 25px 0;
+}
+
+.footer {
+  background-color: var(--neutralDark);
+  color: var(--neutralLight);
+  padding: 20px;
+  text-align: center;
+  width: 100vw;
+}
+
+/* HEADER STYLE */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--neutralLightest);
+    box-shadow: 0 2px 5px rgba(98, 0, 238, 0.6);
+    width: 100vw;
+}
+
+/* PROFILE PICTURE */
+.profile-pic-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 100%;
+    height: auto;
+}
+
+/* NAVIGATION BAR */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar li {
+     margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: var(--fontWeightBold);
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primaryLight);
+}
+
+.navbar .active {
+    border-bottom: 2px solid var(--primary);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.github-icon {
+  margin: 50px;
+}
+
+@media (max-width: 600px) {
+  .cardBorder h3 {
+    font-size: 1em;
+  }
+}
